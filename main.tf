@@ -21,18 +21,11 @@ data "template_file" "script" {
   }
 }
 
-resource "cloudscale_server_group" "faasdserver-group" {
-  name      = "testserver-group"
-  type      = "anti-affinity"
-  zone_slug = var.zone_slug
-}
-
-resource "cloudscale_server" "faasdserver" {
+resource "cloudscale_server" "faasd-server" {
   name               = var.hostname
   flavor_slug        = var.flavor_slug
   image_slug         = var.image_slug
   zone_slug          = var.zone_slug
-  server_group_ids   = [cloudscale_server_group.faasdserver-group.id]
   use_public_network = true
   user_data          = data.template_file.script.rendered
   ssh_keys           = [var.public_key]

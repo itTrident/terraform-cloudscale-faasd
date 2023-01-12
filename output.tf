@@ -9,12 +9,12 @@ output "basic_auth_password" {
   value       = var.basic_auth_password
 }
 
-output "faasdserver_username" {
+output "faasd_server_username" {
   description = "The username for faasd instance"
   value       = var.instance_username
 }
 
-output "faasdserver_ip" {
+output "faasd_server_ip" {
   description = "The public ip of faasd instance"
   value       = cloudscale_server.faasdserver.public_ipv4_address
 }
