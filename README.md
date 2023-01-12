@@ -24,7 +24,6 @@ __faasd__, a lightweight & portable faas engine, is [OpenFaaS](https://github.co
 
 | Name | Type |
 | ---------| ------------|
-| cloudscale_server_group | Resource |
 | cloudscale_server | Resource | 
 | random_password | Resource |
 
